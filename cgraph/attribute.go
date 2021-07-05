@@ -1758,8 +1758,8 @@ func (g *Graph) SetOutputOrder(v OutputMode) *Graph {
 // This is not quite true for the "porth*" cases.
 // For these, orthogonal ordering is only preserved among nodes related by an edge.
 // https://graphviz.gitlab.io/_pages/doc/info/attrs.html#a:overlap
-func (g *Graph) SetOverlap(v bool) *Graph {
-	g.SafeSet(string(overlapAttr), toBoolString(v), trueStr)
+func (g *Graph) SetOverlap(v string) *Graph {
+	g.SafeSet(string(overlapAttr), v, "true")
 	return g
 }
 
